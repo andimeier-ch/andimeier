@@ -1,0 +1,20 @@
+@use "../settings/colors.scss";
+@use "../settings/typography";
+
+body {
+  color: colors.$text;
+  background: colors.$background;
+  font-family: typography.$body-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
