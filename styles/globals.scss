@@ -1,5 +1,5 @@
-@use "../settings/colors.scss";
-@use "../settings/typography";
+@use "./settings/colors";
+@use "./settings/typography";
 
 body {
   color: colors.$text;

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
-import "@/elements/globals.scss";
+import "@/styles/globals.scss";
 
 const bodyFont = Montserrat({
   variable: "--body-font",

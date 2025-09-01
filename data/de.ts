@@ -1,4 +1,4 @@
-export interface Hero {
+export interface HeaderContent {
     title: string;
     claim: string;
 }
@@ -40,7 +40,7 @@ interface Projects extends Section {
     items: Project[];
 }
 
-const hero: Hero = {
+const header: HeaderContent = {
     title: 'Hallo, ich bin Andi, ein Frontend Entwickler.',
     claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle innovative Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
 };
@@ -141,4 +141,4 @@ const projects: Projects = {
     ],
 };
 
-export default { hero, about, experience, projects };
+export default { header, about, experience, projects };

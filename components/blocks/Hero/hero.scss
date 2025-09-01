@@ -1,0 +1,24 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/typography';
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: typography.$accent-font;
+    font-size: 160;
+    font-weight: 700;
+
+    &__title {
+        font-size: min(12vw, 10rem);
+        line-height: 1.1;
+        text-align: center;
+        color: transparent;
+        background-image: colors.$gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

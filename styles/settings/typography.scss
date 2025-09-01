@@ -1,0 +1,9 @@
+$body-font: 'Montserrat', 'arial', sans-serif;
+$accent-font: 'Poppins', 'arial', sans-serif;
+
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+
+$section-side-padding: 4vw;
+$content-max-width: calc(1150px + 2 * #{$section-side-padding});
+$content-narrow-width: calc(850px + 2 * #{$section-side-padding});

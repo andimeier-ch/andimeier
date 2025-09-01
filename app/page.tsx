@@ -1,9 +1,14 @@
-import Header from "@/components/header/Header";
+import Hero from '@/components/blocks/hero/Hero';
+import Claim from '@/components/blocks/claim/Claim';
+import { getDictionary } from '@/lib/i18n';
 
 export default function Home() {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+    const { header } = getDictionary('de');
+
+    return (
+        <header>
+            <Hero>{header.title}</Hero>
+            <Claim>{header.claim}</Claim>
+        </header>
+    );
 }

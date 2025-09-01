@@ -1,0 +1,15 @@
+@use '@/styles/settings/typography';
+
+.section {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 typography.$section-side-padding;
+
+    &--narrow {
+        max-width: typography.$content-narrow-width;
+    }
+
+    &--wide {
+        max-width: typography.$content-max-width;
+    }
+}
