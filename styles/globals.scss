@@ -1,20 +1,27 @@
-@use "./settings/colors";
-@use "./settings/typography";
+@use './settings/colors';
+@use './settings/typography';
 
 body {
-  color: colors.$text;
-  background: colors.$background;
-  font-family: typography.$body-font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    color: colors.$text;
+    background: colors.$background;
+    font-family: typography.$body-font;
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-p {
-  margin: 0;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 }

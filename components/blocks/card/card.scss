@@ -1,0 +1,22 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+
+.card {
+    padding: 2rem 2rem 2rem 5rem;
+    border-radius: spaces.$border-radius;
+    background-color: colors.$background-highlight;
+
+    &__heading {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        left: -3rem;
+        font-size: 2rem;
+    }
+
+    &__items {
+        padding-left: 1rem;
+    }
+}

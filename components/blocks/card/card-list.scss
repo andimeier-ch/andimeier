@@ -1,0 +1,15 @@
+.card-list {
+    display: grid;
+    gap: 4rem 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+
+    @media (max-width: 550px) {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        .card {
+            height: 100%;
+        }
+    }
+}
