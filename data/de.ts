@@ -22,6 +22,7 @@ export interface Job {
     company: string;
     period: [number, number];
     location: string;
+    jobTitle: string;
     tasks: string[];
 }
 
@@ -90,12 +91,13 @@ const about: About = {
 };
 
 const experience: Experience = {
-    title: 'Hier habe ich gearbeitet',
+    title: 'Meine Erfahrung',
     jobs: [
         {
             company: 'Helga Digitalagentur',
             period: [2019, 2025],
             location: 'Bern',
+            jobTitle: 'Frontend Entwickler',
             tasks: [
                 'Umsetzung von Frontends gemäss Designvorgaben mit HTML (Twig), SCSS, JS/TypeScript',
                 'selbständiges Vorantreiben von Projekten, sowie Absprachen mit Backend- und UX-Team',
@@ -108,6 +110,7 @@ const experience: Experience = {
             company: 'kirchenweb',
             period: [2017, 2019],
             location: 'Remote',
+            jobTitle: 'Web Entwickler',
             tasks: [
                 'PHP und Frontend Entwicklung',
                 'Neuinstallation und Unterhalt des kirchenweb Systems',
@@ -117,6 +120,7 @@ const experience: Experience = {
             company: 'zeberliEDV',
             period: [2015, 2027],
             location: 'Kleindietwil',
+            jobTitle: 'Web Entwickler',
             tasks: [
                 'Frontend Entwicklung mit HTML (Twig), CSS/LESS, JavaScript/jQuery',
                 'Drupal Installation und Konfiguration',
