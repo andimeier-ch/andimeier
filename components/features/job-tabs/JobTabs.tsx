@@ -7,6 +7,7 @@ import TabPanel from '@/components/blocks/tabs/TabPanel';
 import { Job } from '@/data/de';
 import './job-tabs.scss';
 import '@/components/elements/list/list.scss';
+import '@/components/elements/gradient-border/gradient-border.scss';
 
 export default function JobTabs({ jobs }: { jobs: Job[] }) {
     function generateJobId(job: Job) {
@@ -66,7 +67,9 @@ export default function JobTabs({ jobs }: { jobs: Job[] }) {
 
                         <ul className="list">
                             {job.tasks.map((task) => (
-                                <li key={task}>{task}</li>
+                                <li key={task} className="list__item">
+                                    {task}
+                                </li>
                             ))}
                         </ul>
                     </TabPanel>

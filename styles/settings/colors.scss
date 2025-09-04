@@ -1,9 +1,10 @@
 $primary-dark: #4a2993;
-$primary-brignt: #73e5cb;
+$primary-bright: #73e5cb;
 
 $background: #333333;
 $background-highlight: #3a3a3a;
 
 $text: #cbf5ec;
 
-$gradient: linear-gradient(135deg, $primary-brignt, $primary-dark);
+$gradient: linear-gradient(135deg, $primary-bright, $primary-dark);
+$gradient-reverse: linear-gradient(315deg, $primary-bright, $primary-dark);

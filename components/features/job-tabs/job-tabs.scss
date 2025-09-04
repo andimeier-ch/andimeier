@@ -1,15 +1,16 @@
 @use '@/styles/settings/colors';
 @use '@/styles/settings/spaces';
 @use '@/styles/settings/typography';
+@use '@/components/elements/gradient-border/gradient-border';
 
 $tab-padding: 2rem;
 
 .job-tabs {
     &__tab {
-        width: 100%;
+        width: calc(100% + 2rem);
         margin-left: -$tab-padding;
         padding: 0.75rem $tab-padding;
-        border-radius: spaces.$border-radius 0 0 spaces.$border-radius;
+        box-sizing: border-box;
 
         &-title {
             margin: 0;
@@ -20,7 +21,9 @@ $tab-padding: 2rem;
         }
 
         &.tab--is-active {
+            border-radius: spaces.$border-radius 0 0;
             background-color: colors.$background-highlight;
+            @include gradient-border.bottom();
         }
     }
 
@@ -28,23 +31,15 @@ $tab-padding: 2rem;
         padding-block: 2rem;
         padding-inline: 4rem 2rem;
         background-color: colors.$background-highlight;
+        border-radius: spaces.$border-radius spaces.$border-radius 0 0;
+        @include gradient-border.bottom($reverse: true);
 
         &--is-first {
-            border-radius: 0 spaces.$border-radius spaces.$border-radius
-                spaces.$border-radius;
-        }
-
-        &--is-mid {
-            border-radius: spaces.$border-radius;
-        }
-
-        &--is-last {
-            border-radius: spaces.$border-radius spaces.$border-radius
-                spaces.$border-radius 0;
+            border-radius: 0 spaces.$border-radius 0 0;
         }
 
         &-title {
-            margin-bottom: 0.5em;
+            margin-bottom: 1em;
             font-weight: typography.$font-weight-bold;
         }
     }

@@ -1,0 +1,21 @@
+@use '@/styles/settings/colors';
+
+@mixin bottom($reverse: false) {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 2px;
+        content: '';
+
+        @if $reverse {
+            background-image: colors.$gradient-reverse;
+        } @else {
+            background-image: colors.$gradient;
+        }
+    }
+}

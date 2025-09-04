@@ -2,6 +2,7 @@
 @use '@/styles/settings/typography';
 
 .heading {
+    width: fit-content;
     padding-bottom: 0.1em;
     font-family: typography.$accent-font;
     color: transparent;

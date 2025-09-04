@@ -23,7 +23,10 @@ export default function Tab({
     const isActive = activeTabId === id;
 
     const cssClasses = ['tab', ...classNames];
-    if (isActive) cssClasses.push('tab--is-active');
+
+    if (isActive) {
+        cssClasses.push('tab--is-active');
+    }
 
     return (
         <button className={printClasses(cssClasses)} onClick={handleTabClick}>

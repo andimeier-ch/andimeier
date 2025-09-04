@@ -19,7 +19,9 @@ export default function Card({ icon, title, items }: AboutTopic) {
 
             <ul className="list">
                 {items.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item} className="list__item">
+                        {item}
+                    </li>
                 ))}
             </ul>
         </div>
