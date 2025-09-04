@@ -5,12 +5,14 @@ import './paragraph.scss';
 export default function Paragraph({
     children,
     size,
+    classNames = [],
 }: {
     children: ReactNode;
     size?: 'large';
+    classNames?: string[];
 }) {
-    const classNames = ['paragraph'];
-    if (size === 'large') classNames.push('paragraph--large');
+    const cssClasses = ['paragraph', ...classNames];
+    if (size === 'large') cssClasses.push('paragraph--large');
 
-    return <p className={printClasses(classNames)}>{children}</p>;
+    return <p className={printClasses(cssClasses)}>{children}</p>;
 }

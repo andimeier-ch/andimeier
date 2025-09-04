@@ -1,6 +1,6 @@
 import { AboutTopic } from '@/data/de';
 import './card.scss';
-import Heading from '@/components/elements/headings/Heading';
+import Heading from '@/components/elements/heading/Heading';
 
 export default function Card({ icon, title, items }: AboutTopic) {
     return (
@@ -17,7 +17,7 @@ export default function Card({ icon, title, items }: AboutTopic) {
                 </Heading>
             </div>
 
-            <ul className="card__items">
+            <ul className="list">
                 {items.map((item) => (
                     <li key={item}>{item}</li>
                 ))}

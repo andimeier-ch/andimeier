@@ -1,26 +1,33 @@
 'use client';
 
+import { ReactNode } from 'react';
 import { useTabsContext } from './Tabs';
+import './tab.scss';
+import { printClasses } from '@/lib/helpers';
 
 export default function Tab({
     id,
-    title,
-    subtitle,
+    classNames = [],
+    children,
 }: {
     id: string;
-    title: string;
-    subtitle: string;
+    classNames?: string[];
+    children: ReactNode;
 }) {
-    const { handleTabChange } = useTabsContext();
+    const { activeTabId, handleTabChange } = useTabsContext();
 
     function handleTabClick() {
         handleTabChange(id);
     }
 
+    const isActive = activeTabId === id;
+
+    const cssClasses = ['tab', ...classNames];
+    if (isActive) cssClasses.push('tab--is-active');
+
     return (
-        <button className="tab" onClick={handleTabClick}>
-            <span>{title}</span>
-            <span>{subtitle}</span>
+        <button className={printClasses(cssClasses)} onClick={handleTabClick}>
+            {children}
         </button>
     );
 }

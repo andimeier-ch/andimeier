@@ -2,12 +2,15 @@
 
 import { ReactNode } from 'react';
 import { useTabsContext } from './Tabs';
+import { printClasses } from '@/lib/helpers';
 
 export default function TabPanel({
     id,
+    classNames = [],
     children,
 }: {
     id: string;
+    classNames?: string[];
     children: ReactNode;
 }) {
     const { activeTabId } = useTabsContext();
@@ -15,5 +18,7 @@ export default function TabPanel({
 
     if (!isVisible) return null;
 
-    return <div className="tab-panel">{children}</div>;
+    const cssClasses = ['tab-panel', ...classNames];
+
+    return <div className={printClasses(cssClasses)}>{children}</div>;
 }

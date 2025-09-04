@@ -1,0 +1,51 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/styles/settings/typography';
+
+$tab-padding: 2rem;
+
+.job-tabs {
+    &__tab {
+        width: 100%;
+        margin-left: -$tab-padding;
+        padding: 0.75rem $tab-padding;
+        border-radius: spaces.$border-radius 0 0 spaces.$border-radius;
+
+        &-title {
+            margin: 0;
+        }
+
+        &-subtitle {
+            margin: 0;
+        }
+
+        &.tab--is-active {
+            background-color: colors.$background-highlight;
+        }
+    }
+
+    &__tab-panel {
+        padding-block: 2rem;
+        padding-inline: 4rem 2rem;
+        background-color: colors.$background-highlight;
+
+        &--is-first {
+            border-radius: 0 spaces.$border-radius spaces.$border-radius
+                spaces.$border-radius;
+        }
+
+        &--is-mid {
+            border-radius: spaces.$border-radius;
+        }
+
+        &--is-last {
+            border-radius: spaces.$border-radius spaces.$border-radius
+                spaces.$border-radius 0;
+        }
+
+        &-title {
+            margin-bottom: 0.5em;
+            font-weight: typography.$font-weight-bold;
+        }
+    }
+}

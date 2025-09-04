@@ -2,6 +2,7 @@
 @use '@/styles/settings/typography';
 
 .heading {
+    padding-bottom: 0.1em;
     font-family: typography.$accent-font;
     color: transparent;
     background-image: colors.$gradient;
@@ -15,13 +16,13 @@
     }
 
     &--h2 {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.4em;
         font-size: 2.5rem;
         line-height: 1.12;
     }
 
     &--h3 {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.4em;
         font-size: 1.5rem;
         line-height: 1.12;
     }

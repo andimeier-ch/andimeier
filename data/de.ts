@@ -50,12 +50,12 @@ const about: About = {
     topics: [
         {
             icon: '🚀',
-            title: 'Dabei unterstütze ich',
+            title: 'Damit unterstütze ich',
             items: [
                 'Aufbau und Weiterentwicklung komplexer Frontends',
                 'Einführung von Designsystemen und Komponentenbibliotheken',
                 'Technische UX-Optimierung & Refactoring',
-                'Enge Zusammenarbeit mit UX, Design & Backend',
+                'Koordination von UX-Design, Frontend und Backend',
             ],
         },
         {

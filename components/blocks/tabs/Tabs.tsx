@@ -1,6 +1,7 @@
 'use client';
 
-import { createContext, ReactNode, use, useEffect, useState } from 'react';
+import { createContext, ReactNode, use, useState } from 'react';
+import './tabs.scss';
 
 type TabsContextObject = {
     activeTabId: string;
