@@ -1,4 +1,4 @@
-import { ReactNode, ComponentPropsWithoutRef } from 'react';
+import { ReactNode } from 'react';
 import './tab-list.scss';
 
 export default function TabList({

@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
+import { motion } from 'motion/react';
 import { useTabsContext } from './Tabs';
 import './tab.scss';
 import { printClasses } from '@/lib/helpers';
@@ -43,6 +44,13 @@ export default function Tab({
             {...props}
         >
             {children}
+
+            {isActive && (
+                <motion.div
+                    className="tab__background"
+                    layoutId="tab-indicator"
+                />
+            )}
         </button>
     );
 }

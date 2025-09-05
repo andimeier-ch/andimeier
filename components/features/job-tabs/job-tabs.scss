@@ -19,12 +19,6 @@ $tab-padding: 2rem;
         &-subtitle {
             margin: 0;
         }
-
-        &.tab--is-active {
-            border-radius: spaces.$border-radius 0 0;
-            background-color: colors.$background-highlight;
-            @include gradient-border.bottom();
-        }
     }
 
     &__tab-panel {

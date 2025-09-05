@@ -1,7 +1,9 @@
 @use '@/styles/settings/colors';
 
-@mixin bottom($reverse: false) {
-    position: relative;
+@mixin bottom($reverse: false, $is-positioned: false) {
+    @if $is-positioned == false {
+        position: relative;
+    }
 
     &::after {
         position: absolute;

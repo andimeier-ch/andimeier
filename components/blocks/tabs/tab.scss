@@ -1,6 +1,23 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/components/elements/gradient-border/gradient-border';
+
 .tab {
     all: unset;
+    position: relative;
     outline: revert;
     display: block;
     cursor: pointer;
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: spaces.$border-radius 0 0;
+        background-color: colors.$background-highlight;
+        @include gradient-border.bottom($is-positioned: true);
+    }
 }
