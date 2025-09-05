@@ -1,20 +1,30 @@
 import { printClasses } from '@/lib/helpers';
-import { JSX, ReactNode } from 'react';
+import { ComponentPropsWithoutRef, ElementType, JSX, ReactNode } from 'react';
 import './heading.scss';
 
-export default function Heading({
-    tagLevel,
-    designLevel,
-    classNames = [],
-    children,
-}: {
-    tagLevel: 1 | 2 | 3 | 4 | 5 | 6;
+type HeadingTag = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+type HeadingProps<T extends HeadingTag> = {
+    tag: T;
     designLevel: 1 | 2 | 3;
     classNames?: string[];
     children: ReactNode;
-}) {
-    const Tag = `h${tagLevel}` as keyof JSX.IntrinsicElements;
+} & ComponentPropsWithoutRef<T>;
+
+export default function Heading<T extends HeadingTag>({
+    tag,
+    designLevel,
+    classNames = [],
+    children,
+    ...props
+}: HeadingProps<T>) {
+    const Tag = tag as ElementType;
+
     const classes = ['heading', `heading--h${designLevel}`, ...classNames];
 
-    return <Tag className={printClasses(classes)}>{children}</Tag>;
+    return (
+        <Tag className={printClasses(classes)} {...props}>
+            {children}
+        </Tag>
+    );
 }

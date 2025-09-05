@@ -19,7 +19,7 @@ export default function Home() {
             <main>
                 <Section size="wide">
                     <Heading
-                        tagLevel={2}
+                        tag="h2"
                         designLevel={2}
                         classNames={['visually-hidden']}
                     >
@@ -30,11 +30,7 @@ export default function Home() {
                 </Section>
 
                 <Section size="narrow">
-                    <Heading tagLevel={2} designLevel={2}>
-                        {experience.title}
-                    </Heading>
-
-                    <JobTabs jobs={experience.jobs} />
+                    <JobTabs title={experience.title} jobs={experience.jobs} />
                 </Section>
             </main>
         </>

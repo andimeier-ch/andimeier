@@ -8,11 +8,7 @@ export default function Card({ icon, title, items }: AboutTopic) {
             <div className="card__heading">
                 <span className="card__icon">{icon}</span>
 
-                <Heading
-                    tagLevel={3}
-                    designLevel={2}
-                    classNames={['card__title']}
-                >
+                <Heading tag="h3" designLevel={2} classNames={['card__title']}>
                     {title}
                 </Heading>
             </div>

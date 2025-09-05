@@ -20,5 +20,9 @@ export default function TabPanel({
 
     const cssClasses = ['tab-panel', ...classNames];
 
-    return <div className={printClasses(cssClasses)}>{children}</div>;
+    return (
+        <div className={printClasses(cssClasses)} tabIndex={0}>
+            {children}
+        </div>
+    );
 }

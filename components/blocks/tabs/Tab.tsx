@@ -23,13 +23,25 @@ export default function Tab({
     const isActive = activeTabId === id;
 
     const cssClasses = ['tab', ...classNames];
+    const props: { 'aria-selected': boolean; tabIndex?: number } = {
+        'aria-selected': false,
+    };
 
     if (isActive) {
         cssClasses.push('tab--is-active');
+        props['aria-selected'] = true;
+    }
+
+    if (!isActive) {
+        props.tabIndex = -1;
     }
 
     return (
-        <button className={printClasses(cssClasses)} onClick={handleTabClick}>
+        <button
+            className={printClasses(cssClasses)}
+            onClick={handleTabClick}
+            {...props}
+        >
             {children}
         </button>
     );
