@@ -17,7 +17,7 @@ export default function Home() {
             </header>
 
             <main>
-                <Section size="wide">
+                <Section size="wide" marginTop={16} marginBottom={16}>
                     <Heading
                         tag="h2"
                         designLevel={2}
@@ -29,7 +29,7 @@ export default function Home() {
                     <CardList items={about.topics} />
                 </Section>
 
-                <Section size="narrow">
+                <Section size="narrow" marginTop={16} marginBottom={16}>
                     <JobTabs title={experience.title} jobs={experience.jobs} />
                 </Section>
             </main>
