@@ -5,6 +5,7 @@ import Hero from '@/components/blocks/hero/Hero';
 import Claim from '@/components/blocks/claim/Claim';
 import CardList from '@/components/blocks/card/CardList';
 import JobTabs from '@/components/features/job-tabs/JobTabs';
+import './page.scss';
 
 export default function Home() {
     const { header, about, experience } = getDictionary('de');
@@ -16,7 +17,7 @@ export default function Home() {
                 <Claim>{header.claim}</Claim>
             </header>
 
-            <main>
+            <main className="main-content">
                 <Section size="wide" marginTop={16} marginBottom={16}>
                     <Heading
                         tag="h2"

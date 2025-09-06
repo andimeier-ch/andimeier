@@ -1,0 +1,17 @@
+@use '@/styles/settings/z-index';
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    z-index: z-index.$hero;
+}
+
+.claim,
+.main-content {
+    position: relative;
+    z-index: z-index.$content;
+}
