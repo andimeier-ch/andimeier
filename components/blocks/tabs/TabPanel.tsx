@@ -19,7 +19,9 @@ export default function TabPanel({
     const isVisible = activeTabId === id;
 
     const cssClasses = ['tab-panel', ...classNames];
-    const props: { tabIndex?: number } = {};
+    const props: { 'aria-labelledby': string; tabIndex?: number } = {
+        'aria-labelledby': id,
+    };
 
     if (isVisible) {
         props.tabIndex = 0;

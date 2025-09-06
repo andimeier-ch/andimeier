@@ -24,8 +24,14 @@ export default function Tab({
     const isActive = activeTabId === id;
 
     const cssClasses = ['tab', ...classNames];
-    const props: { 'aria-selected': boolean; tabIndex?: number } = {
+
+    const props: {
+        'aria-selected': boolean;
+        'aria-controls': string;
+        tabIndex?: number;
+    } = {
         'aria-selected': false,
+        'aria-controls': id,
     };
 
     if (isActive) {
