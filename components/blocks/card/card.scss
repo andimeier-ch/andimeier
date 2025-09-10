@@ -1,18 +1,32 @@
 @use '@/styles/settings/colors';
 @use '@/styles/settings/spaces';
+@use '@/styles/utils/fluid';
+@use '@/components/elements/gradient-border/gradient-border';
+
+$breakpoint: 500px;
 
 .card {
-    padding: 2rem 2rem 2rem 5rem;
-    border-radius: spaces.$border-radius;
+    padding: 2rem;
+    border-radius: spaces.$border-radius spaces.$border-radius 0 0;
     background-color: colors.$background-highlight;
+    @include gradient-border.bottom($reverse: true);
+
+    @media (min-width: $breakpoint) {
+        padding: 2rem 2rem 2rem fluid.scale(3.3rem, 5rem);
+    }
 
     &__heading {
-        position: relative;
+        @media (min-width: $breakpoint) {
+            position: relative;
+        }
     }
 
     &__icon {
-        position: absolute;
-        left: -3rem;
-        font-size: 2rem;
+        font-size: fluid.scale(1.7rem, 2rem);
+
+        @media (min-width: $breakpoint) {
+            position: absolute;
+            left: fluid.scale(-2.2rem, -3rem);
+        }
     }
 }

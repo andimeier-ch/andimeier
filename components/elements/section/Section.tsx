@@ -1,6 +1,6 @@
 import { printClasses } from '@/lib/helpers';
 import { ReactNode } from 'react';
-import { Margin } from '@/lib/spacingTypes';
+import { SectionMargin } from '@/lib/spacingTypes';
 import './section.scss';
 
 function generateMarginClass(spacing: number) {
@@ -17,8 +17,8 @@ export default function Section({
     children: ReactNode;
     size: 'wide' | 'narrow';
     classNames?: string[];
-    marginTop?: Margin;
-    marginBottom?: Margin;
+    marginTop?: SectionMargin;
+    marginBottom?: SectionMargin;
 }) {
     const classes = ['section', `section--${size}`, ...classNames];
 

@@ -1,11 +1,16 @@
 @use './settings/colors';
 @use './settings/typography';
+@use './utils/fluid';
+
+html {
+    font-size: 16px;
+}
 
 body {
     color: colors.$text;
     background: colors.$background;
     font-family: typography.$body-font;
-    font-size: 1rem;
+    font-size: fluid.scale(1rem, 1.1rem);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

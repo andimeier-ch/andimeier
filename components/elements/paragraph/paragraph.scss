@@ -1,10 +1,10 @@
+@use '@/styles/utils/fluid';
+
 .paragraph {
     margin: 1em 0;
-    font-size: 1rem;
-    line-height: 1.5;
 
     &--large {
-        font-size: 1.5rem;
+        font-size: fluid.scale(1.2rem, 1.8rem);
         line-height: 1.5;
     }
 }

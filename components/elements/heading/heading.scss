@@ -1,5 +1,6 @@
 @use '@/styles/settings/colors';
 @use '@/styles/settings/typography';
+@use '@/styles/utils/fluid';
 
 .heading {
     width: fit-content;
@@ -18,13 +19,13 @@
 
     &--h2 {
         margin-bottom: 0.4em;
-        font-size: 2.5rem;
+        font-size: fluid.scale(2rem, 2.5rem);
         line-height: 1.12;
     }
 
     &--h3 {
         margin-bottom: 0.4em;
-        font-size: 1.5rem;
+        font-size: fluid.scale(1.2rem, 1.5rem);
         line-height: 1.12;
     }
 }
