@@ -3,6 +3,7 @@
 import { ReactNode } from 'react';
 import { AnimatePresence, motion, Variants } from 'motion/react';
 import { useAccordionContext } from './Accordion';
+import { viewportChildVariants } from '@/lib/motion';
 
 type AccordionItemSlot = {
     className: string;
@@ -38,6 +39,8 @@ export default function AccordionItem({
             className={className}
             animate={isOpen ? { x: 6 } : undefined}
             whileHover={isOpen ? undefined : { x: 6 }}
+            variants={viewportChildVariants}
+            viewport={{ amount: 'all' }}
         >
             <motion.button
                 className={`${trigger.className} button-reset`}

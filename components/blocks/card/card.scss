@@ -7,9 +7,8 @@ $breakpoint: 500px;
 
 .card {
     padding: 2rem;
-    border-radius: spaces.$border-radius spaces.$border-radius 0 0;
+    border-radius: spaces.$border-radius;
     background-color: colors.$background-highlight;
-    @include gradient-border.bottom($reverse: true);
 
     @media (min-width: $breakpoint) {
         padding: 2rem 2rem 2rem fluid.scale(3.3rem, 5rem);

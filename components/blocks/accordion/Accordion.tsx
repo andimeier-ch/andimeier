@@ -1,6 +1,8 @@
 'use client';
 
 import { createContext, ReactNode, use, useState } from 'react';
+import { motion } from 'motion/react';
+import { viewportContainerVariants } from '@/lib/motion';
 import './accordion.scss';
 
 type AccordionContextObject = {
@@ -51,7 +53,14 @@ export default function Accordion({
 
     return (
         <AccordionContext value={contextValue}>
-            <div className={className}>{children}</div>
+            <motion.div
+                className={className}
+                variants={viewportContainerVariants}
+                initial="hidden"
+                whileInView="visible"
+            >
+                {children}
+            </motion.div>
         </AccordionContext>
     );
 }

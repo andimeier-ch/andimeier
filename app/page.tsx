@@ -4,9 +4,8 @@ import Heading from '@/components/elements/heading/Heading';
 import Hero from '@/components/blocks/hero/Hero';
 import Claim from '@/components/blocks/claim/Claim';
 import CardList from '@/components/blocks/card/CardList';
-import JobTabs from '@/components/features/job-tabs/JobTabs';
-import './page.scss';
 import JobAccordion from '@/components/features/job-accordion/JobAccordion';
+import './page.scss';
 
 export default function Home() {
     const { header, about, experience } = getDictionary('de');

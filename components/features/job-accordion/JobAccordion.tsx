@@ -17,8 +17,6 @@ export default function JobAccordion({
         return job.period.join('-').trim();
     }
 
-    console.log(AngleDown);
-
     return (
         <>
             <Heading tag="h2" designLevel={2}>
