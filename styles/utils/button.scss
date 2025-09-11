@@ -1,0 +1,5 @@
+@mixin reset() {
+    all: unset;
+    outline: revert;
+    box-sizing: border-box;
+}
