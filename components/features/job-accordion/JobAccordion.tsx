@@ -19,9 +19,11 @@ export default function JobAccordion({
 
     return (
         <>
-            <Heading tag="h2" designLevel={2}>
-                {title}
-            </Heading>
+            <div className="section__title">
+                <Heading tag="h2" designLevel={2}>
+                    {title}
+                </Heading>
+            </div>
 
             <Accordion className="accordion">
                 {jobs.map((job) => {

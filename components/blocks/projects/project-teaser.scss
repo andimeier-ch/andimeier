@@ -1,0 +1,43 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/styles/utils/fluid';
+
+$breakpoint: 500px;
+
+.project-teaser {
+    display: grid;
+    grid-template-columns: auto;
+    border-radius: spaces.$border-radius;
+    background-color: colors.$background-highlight;
+    overflow: hidden;
+
+    @media (min-width: $breakpoint) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__image {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__text {
+        align-self: center;
+        padding: fluid.scale(1rem, 4rem) 2rem fluid.scale(0.5rem, 2rem)
+            fluid.scale(2rem, 4rem);
+    }
+
+    &__title,
+    &__subtitle {
+        margin: 0;
+    }
+
+    &__link {
+        .link {
+            margin-block: -1rem;
+            padding-block: 1rem;
+        }
+    }
+}

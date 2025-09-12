@@ -7,4 +7,8 @@
         font-size: fluid.scale(1.2rem, 1.8rem);
         line-height: 1.5;
     }
+
+    &--small {
+        font-size: fluid.scale(0.8rem, 0.9rem);
+    }
 }

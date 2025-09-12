@@ -1,0 +1,17 @@
+@use '@/styles/settings/colors';
+
+.link {
+    color: transparent;
+    background-image: colors.$gradient;
+    background-clip: text;
+    background-size: 200% auto;
+    background-position-x: 0;
+    background-repeat: repeat;
+    transition: background-position-x 0.3s ease-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+        background-position-x: -200%;
+    }
+}

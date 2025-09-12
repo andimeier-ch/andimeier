@@ -21,11 +21,7 @@ export default function CardList({ items }: { items: AboutTopic[] }) {
                     variants={viewportChildVariants}
                     viewport={{ amount: 'all' }}
                 >
-                    <Card
-                        title={topic.title}
-                        icon={topic.icon}
-                        items={topic.items}
-                    />
+                    <Card {...topic} />
                 </motion.div>
             ))}
         </motion.div>

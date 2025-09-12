@@ -4,6 +4,7 @@ export interface HeaderContent {
 }
 
 export interface AboutTopic {
+    id: string;
     icon: string;
     title: string;
     items: string[];
@@ -19,6 +20,7 @@ interface Section {
 }
 
 export interface Job {
+    id: string;
     company: string;
     period: [number, number];
     location: string;
@@ -31,10 +33,13 @@ interface Experience extends Section {
 }
 
 export interface Project {
+    id: string;
     name: string;
     type: string;
     image: string;
-    description: string;
+    description?: string;
+    linkTitle?: string;
+    linkURL?: string;
 }
 
 interface Projects extends Section {
@@ -49,6 +54,7 @@ const header: HeaderContent = {
 const about: About = {
     topics: [
         {
+            id: 'a1',
             icon: '🚀',
             title: 'Damit unterstütze ich',
             items: [
@@ -59,6 +65,7 @@ const about: About = {
             ],
         },
         {
+            id: 'a2',
             icon: '💪🏻',
             title: 'So arbeite ich',
             items: [
@@ -69,6 +76,7 @@ const about: About = {
             ],
         },
         {
+            id: 'a3',
             icon: '🛠',
             title: 'Das kann ich',
             items: [
@@ -79,6 +87,7 @@ const about: About = {
             ],
         },
         {
+            id: 'a4',
             icon: '🙋',
             title: 'Das bin ich',
             items: [
@@ -94,6 +103,7 @@ const experience: Experience = {
     title: 'Meine Erfahrung',
     jobs: [
         {
+            id: 'j1',
             company: 'Helga Digitalagentur',
             period: [2019, 2025],
             location: 'Bern',
@@ -107,6 +117,7 @@ const experience: Experience = {
             ],
         },
         {
+            id: 'j2',
             company: 'kirchenweb',
             period: [2017, 2019],
             location: 'Remote',
@@ -117,6 +128,7 @@ const experience: Experience = {
             ],
         },
         {
+            id: 'j3',
             company: 'zeberliEDV',
             period: [2015, 2027],
             location: 'Kleindietwil',
@@ -132,15 +144,31 @@ const experience: Experience = {
 
 const projects: Projects = {
     title: 'Projekte',
-    lead: 'Projekte, bei denen ich massgeblich mitgwirkt habe. Alles bei Helga.',
+    lead: 'Projekte, bei denen ich massgeblich im Frontend mitgwirkt habe. Alles bei Helga.',
     items: [
-        { name: 'Bystronic', type: 'Website', image: '', description: '' },
-        { name: 'Rondo', type: 'Website', image: '', description: '' },
         {
+            id: 'p1',
+            name: 'Bystronic',
+            type: 'Website',
+            image: 'bystronic.png',
+            linkTitle: 'bystronic.com',
+            linkURL: 'https://www.bystronic.com',
+        },
+        {
+            id: 'p2',
+            name: 'Rondo',
+            type: 'Website',
+            image: 'rondo.png',
+            linkTitle: 'rondo-online.com',
+            linkURL: 'https://rondo-online.com',
+        },
+        {
+            id: 'p3',
             name: 'UBS Football Skills',
             type: 'Mobile Webapp',
-            image: '',
-            description: '',
+            image: 'ubs-football-skills.png',
+            linkTitle: 'ubs-football-skills.ch',
+            linkURL: 'https://www.ubs-football-skills.ch',
         },
     ],
 };

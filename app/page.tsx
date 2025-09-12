@@ -5,10 +5,11 @@ import Hero from '@/components/blocks/hero/Hero';
 import Claim from '@/components/blocks/claim/Claim';
 import CardList from '@/components/blocks/card/CardList';
 import JobAccordion from '@/components/features/job-accordion/JobAccordion';
+import Projects from '@/components/features/projects/Projects';
 import './page.scss';
 
 export default function Home() {
-    const { header, about, experience } = getDictionary('de');
+    const { header, about, experience, projects } = getDictionary('de');
 
     return (
         <>
@@ -34,6 +35,14 @@ export default function Home() {
                     <JobAccordion
                         title={experience.title}
                         jobs={experience.jobs}
+                    />
+                </Section>
+
+                <Section size="narrow" marginTop={16} marginBottom={16}>
+                    <Projects
+                        title={projects.title}
+                        lead={projects.lead}
+                        projects={projects.items}
                     />
                 </Section>
             </main>

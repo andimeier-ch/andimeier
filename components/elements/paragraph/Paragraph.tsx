@@ -8,11 +8,11 @@ export default function Paragraph({
     classNames = [],
 }: {
     children: ReactNode;
-    size?: 'large';
+    size?: 'small' | 'large';
     classNames?: string[];
 }) {
     const cssClasses = ['paragraph', ...classNames];
-    if (size === 'large') cssClasses.push('paragraph--large');
+    if (size) cssClasses.push(`paragraph--${size}`);
 
     return <p className={printClasses(cssClasses)}>{children}</p>;
 }
