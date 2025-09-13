@@ -1,57 +1,16 @@
-export interface HeaderContent {
-    title: string;
-    claim: string;
-}
+import {
+    HeaderSection,
+    AboutSection,
+    ExperienceSection,
+    ProjectsSection,
+} from '@/lib/contentTypes';
 
-export interface AboutTopic {
-    id: string;
-    icon: string;
-    title: string;
-    items: string[];
-}
-
-export interface About {
-    topics: AboutTopic[];
-}
-
-interface Section {
-    title: string;
-    lead?: string;
-}
-
-export interface Job {
-    id: string;
-    company: string;
-    period: [number, number];
-    location: string;
-    jobTitle: string;
-    tasks: string[];
-}
-
-interface Experience extends Section {
-    jobs: Job[];
-}
-
-export interface Project {
-    id: string;
-    name: string;
-    type: string;
-    image: string;
-    description?: string;
-    linkTitle?: string;
-    linkURL?: string;
-}
-
-interface Projects extends Section {
-    items: Project[];
-}
-
-const header: HeaderContent = {
+const header: HeaderSection = {
     title: 'Hallo, ich bin Andi, ein Frontend Entwickler.',
     claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle innovative Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
 };
 
-const about: About = {
+const about: AboutSection = {
     topics: [
         {
             id: 'a1',
@@ -99,7 +58,7 @@ const about: About = {
     ],
 };
 
-const experience: Experience = {
+const experience: ExperienceSection = {
     title: 'Meine Erfahrung',
     jobs: [
         {
@@ -142,7 +101,7 @@ const experience: Experience = {
     ],
 };
 
-const projects: Projects = {
+const projects: ProjectsSection = {
     title: 'Projekte',
     lead: 'Projekte, bei denen ich massgeblich im Frontend mitgwirkt habe. Alles bei Helga.',
     items: [

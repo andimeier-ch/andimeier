@@ -3,7 +3,7 @@
 import { motion } from 'motion/react';
 import { viewportChildVariants, viewportContainerVariants } from '@/lib/motion';
 import Card from './Card';
-import { AboutTopic } from '@/data/de';
+import { AboutTopic } from '@/lib/contentTypes';
 import './card-list.scss';
 
 export default function CardList({ items }: { items: AboutTopic[] }) {

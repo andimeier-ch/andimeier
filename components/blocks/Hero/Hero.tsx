@@ -18,16 +18,6 @@ export default function Hero({ children }: { children: ReactNode }) {
     const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
     return (
-        // <div className="hero">
-        //     <motion.div
-        //         className="hero__title-wrapper"
-        //         ref={hero}
-        //         style={{ scale, y, opacity }}
-        //     >
-        //         <p className="hero__title">{children}</p>
-        //     </motion.div>
-        // </div>
-
         <Section size="wide" classNames={['hero']}>
             <motion.div
                 className="hero__title-wrapper"

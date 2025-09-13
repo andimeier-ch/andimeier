@@ -3,7 +3,7 @@
 import { StaticImageData } from 'next/image';
 import { motion } from 'motion/react';
 import { viewportContainerVariants } from '@/lib/motion';
-import { Project } from '@/data/de';
+import { Project } from '@/lib/contentTypes';
 import Heading from '@/components/elements/heading/Heading';
 import ProjectTeaser from '@/components/blocks/projects/ProjectTeaser';
 import './projects.scss';

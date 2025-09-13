@@ -1,4 +1,4 @@
-import { AboutTopic } from '@/data/de';
+import { AboutTopic } from '@/lib/contentTypes';
 import './card.scss';
 import Heading from '@/components/elements/heading/Heading';
 

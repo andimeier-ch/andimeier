@@ -1,7 +1,7 @@
 import Heading from '@/components/elements/heading/Heading';
 import Paragraph from '@/components/elements/paragraph/Paragraph';
 import Accordion from '@/components/blocks/accordion/Accordion';
-import { Job } from '@/data/de';
+import { Job } from '@/lib/contentTypes';
 import AccordionItem from '@/components/blocks/accordion/AccordionItem';
 import AngleDown from '@/components/icons/AngleDown';
 import '@/components/elements/list/list.scss';
