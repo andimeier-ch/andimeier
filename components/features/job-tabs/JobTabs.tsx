@@ -4,7 +4,7 @@ import Tabs from '@/components/blocks/tabs/Tabs';
 import TabList from '@/components/blocks/tabs/TabList';
 import Tab from '@/components/blocks/tabs/Tab';
 import TabPanel from '@/components/blocks/tabs/TabPanel';
-import { Job } from '@/data/de';
+import { Job } from '@/lib/contentTypes';
 import './job-tabs.scss';
 import '@/components/elements/list/list.scss';
 import '@/components/elements/gradient-border/gradient-border.scss';
