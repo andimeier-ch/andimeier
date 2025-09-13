@@ -25,7 +25,7 @@ export default function Projects({
     projects,
 }: {
     title: string;
-    lead: string;
+    lead?: string;
     projects: Project[];
 }) {
     return (
