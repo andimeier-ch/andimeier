@@ -6,8 +6,8 @@ import {
 } from '@/lib/contentTypes';
 
 const header: HeaderSection = {
-    title: 'Hallo, ich bin Andi, ein Frontend Entwickler.',
-    claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle innovative Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
+    title: 'Hallo, ich bin Andi, Frontend Entwickler.',
+    claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle moderne Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
 };
 
 const about: AboutSection = {
@@ -20,7 +20,7 @@ const about: AboutSection = {
                 'Aufbau und Weiterentwicklung komplexer Frontends',
                 'Einführung von Designsystemen und Komponentenbibliotheken',
                 'Technische UX-Optimierung & Refactoring',
-                'Koordination von UX-Design, Frontend und Backend',
+                'Abstimmung zwischen UX, Frontend und Backend',
             ],
         },
         {
@@ -30,7 +30,7 @@ const about: AboutSection = {
             items: [
                 'Überblick & Fokus: das Ganze im Blick, Details im Griff',
                 'Struktur & Innovation: Ordnung schaffen, neue Wege gehen',
-                'Vernetzen & Zusammenbringen: Synergien entdecken und nutzen',
+                'Vernetzen & Zusammenbringen: Synergien erkennen und nutzen',
                 'Sauberer, wartbarer Code: skalierbare und übersichtliche Lösungen',
             ],
         },
@@ -52,7 +52,7 @@ const about: AboutSection = {
             items: [
                 'verheiratet, 3 Kinder',
                 'Musik machen',
-                'Wandern/Hochtouren',
+                'Wandern und Hochtouren',
             ],
         },
     ],
@@ -69,7 +69,7 @@ const experience: ExperienceSection = {
             jobTitle: 'Frontend Entwickler',
             tasks: [
                 'Umsetzung von Frontends gemäss Designvorgaben mit HTML (Twig), SCSS, JS/TypeScript',
-                'selbständiges Vorantreiben von Projekten, sowie Absprachen mit Backend- und UX-Team',
+                'Selbständiges Vorantreiben von Projekten, sowie Absprachen mit Backend- und UX-Team',
                 'Code Reviews, Issue Management',
                 'Weiterentwicklung der firmeninternen Strukturierung von Drupal Themes',
                 'Drupal Konfiguration und Preprocessing mit PHP',
@@ -82,8 +82,8 @@ const experience: ExperienceSection = {
             location: 'Remote',
             jobTitle: 'Web Entwickler',
             tasks: [
-                'PHP und Frontend Entwicklung',
-                'Neuinstallation und Unterhalt des kirchenweb Systems',
+                'PHP- und Frontend-Entwicklung',
+                'Neuinstallation und Unterhalt des kirchenweb-Systems',
             ],
         },
         {
@@ -93,7 +93,7 @@ const experience: ExperienceSection = {
             location: 'Kleindietwil',
             jobTitle: 'Web Entwickler',
             tasks: [
-                'Frontend Entwicklung mit HTML (Twig), CSS/LESS, JavaScript/jQuery',
+                'Frontend-Entwicklung mit HTML (Twig), CSS (LESS), JS/jQuery',
                 'Drupal Installation und Konfiguration',
                 '1st Level Support',
             ],
@@ -103,12 +103,12 @@ const experience: ExperienceSection = {
 
 const projects: ProjectsSection = {
     title: 'Projekte',
-    lead: 'Projekte, bei denen ich massgeblich im Frontend mitgwirkt habe. Alles bei Helga.',
+    lead: 'Projekte, bei denen ich im Frontend massgeblich beteiligt war. Alles bei Helga.',
     items: [
         {
             id: 'p1',
             name: 'Bystronic',
-            type: 'Website',
+            type: 'Corporate Website',
             image: 'bystronic.png',
             linkTitle: 'bystronic.com',
             linkURL: 'https://www.bystronic.com',
@@ -116,7 +116,7 @@ const projects: ProjectsSection = {
         {
             id: 'p2',
             name: 'Rondo',
-            type: 'Website',
+            type: 'Corporate Website',
             image: 'rondo.png',
             linkTitle: 'rondo-online.com',
             linkURL: 'https://rondo-online.com',
