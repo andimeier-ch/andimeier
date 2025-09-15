@@ -1,5 +1,5 @@
 $primary-dark: #4a2993;
-$primary-dark-text: #6b47bb;
+$primary-dark-text: #9263f8;
 $primary-bright: #73e5cb;
 
 $background: #333333;
@@ -10,3 +10,9 @@ $text: #cbf5ec;
 $gradient: linear-gradient(135deg, $primary-bright, $primary-dark);
 $gradient-text: linear-gradient(135deg, $primary-bright, $primary-dark-text);
 $gradient-reverse: linear-gradient(315deg, $primary-bright, $primary-dark-text);
+$gradient-animated: linear-gradient(
+    135deg,
+    $primary-bright,
+    $primary-dark-text,
+    $primary-bright
+);

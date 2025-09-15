@@ -11,4 +11,8 @@
     &--small {
         font-size: fluid.scale(0.8rem, 0.9rem);
     }
+
+    &--center {
+        text-align: center;
+    }
 }

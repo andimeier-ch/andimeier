@@ -1,0 +1,30 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/styles/utils/button';
+@use '@/styles/utils/fluid';
+
+.button {
+    &--button {
+        @include button.reset();
+    }
+
+    & {
+        display: inline-block;
+        padding: 1rem 3rem;
+        font-size: fluid.scale(1.2rem, 1.5rem);
+        color: colors.$background;
+        background-color: colors.$background-highlight;
+        background-image: colors.$gradient-animated;
+        background-size: 200%;
+        border-radius: 8px;
+        transition: background-position 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    &--link {
+        text-decoration: none;
+
+        &:hover {
+            background-position: -200%;
+        }
+    }
+}
