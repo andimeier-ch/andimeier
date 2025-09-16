@@ -37,17 +37,6 @@ export default function Home() {
 
                 <Section size="narrow">
                     <CallToAction />
-                    {/* <motion.div>
-                        <Paragraph size="large" center>
-                            Du willst mit mir arbeiten?
-                        </Paragraph>
-
-                        <Paragraph center>
-                            <Button url="mailto:hallo@andimeier.ch">
-                                Schreib mir!
-                            </Button>
-                        </Paragraph>
-                    </motion.div> */}
                 </Section>
 
                 <Section size="narrow" marginTop={16} marginBottom={16}>

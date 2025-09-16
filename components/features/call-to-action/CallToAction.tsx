@@ -26,9 +26,7 @@ export default function CallToAction() {
                 viewport={{ amount: 'all' }}
             >
                 <Paragraph center>
-                    <Button url="mailto:hallo@andimeier.ch">
-                        Schreib mir!
-                    </Button>
+                    <Button email="hallo@andimeier.ch">Schreib mir!</Button>
                 </Paragraph>
             </motion.div>
         </motion.div>
