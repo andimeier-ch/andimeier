@@ -44,12 +44,7 @@ export default function CallToAction() {
                 isOpen={contactFormIsVisible}
                 onClose={() => setContactFormIsVisible(false)}
             >
-                <ContactForm />
-                <p>
-                    <Button onClick={() => setContactFormIsVisible(false)}>
-                        X
-                    </Button>
-                </p>
+                <ContactForm onCancel={() => setContactFormIsVisible(false)} />
             </Modal>
         </>
     );

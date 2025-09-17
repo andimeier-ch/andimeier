@@ -1,0 +1,10 @@
+.contact-form {
+    width: 90vw;
+    max-width: 400px;
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: end;
+    }
+}

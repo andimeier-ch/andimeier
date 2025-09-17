@@ -2,6 +2,10 @@
 @use '@/styles/settings/spaces';
 @use '@/styles/settings/typography';
 @use '@/styles/utils/fluid';
+@use '@/styles/utils/focus';
+
+$animation-duration: 0.1s;
+$animation-easing: ease-out;
 
 .form-field {
     display: flex;
@@ -12,7 +16,7 @@
     &__label {
         order: 1;
         font-size: 1rem;
-        transition: color 0.2s ease-out;
+        transition: color $animation-duration $animation-easing;
     }
 
     &__input {
@@ -22,6 +26,7 @@
         color: colors.$background;
         border: 0;
         border-radius: spaces.$border-radius-small;
+        @include focus.style($animation-duration, $animation-easing);
 
         &:focus {
             + .form-field__label {

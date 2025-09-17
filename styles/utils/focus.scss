@@ -1,0 +1,10 @@
+@use '@/styles/settings/colors';
+
+@mixin style($animation-duration: 0.1s, $animation-easing: ease-out) {
+    outline: 2px solid transparent;
+    transition: outline-color $animation-duration $animation-easing;
+
+    &:focus-visible {
+        outline-color: colors.$primary-bright;
+    }
+}
