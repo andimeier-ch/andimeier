@@ -1,16 +1,18 @@
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes, RefObject } from 'react';
 import FormField from './FormField';
 
 export default function Input({
     type,
     label,
     name,
+    ref,
     required,
     ...props
 }: {
     type: InputHTMLAttributes<HTMLInputElement>['type'];
     label: string;
     name: string;
+    ref?: RefObject<HTMLInputElement | null>;
     required?: boolean;
 } & InputHTMLAttributes<HTMLInputElement>) {
     return (
@@ -20,6 +22,7 @@ export default function Input({
                 type={type}
                 name={name}
                 id={name}
+                ref={ref}
                 required={required}
                 {...props}
             />
