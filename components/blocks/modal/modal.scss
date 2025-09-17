@@ -3,17 +3,16 @@
 @use '@/styles/settings/z-index';
 
 .modal {
+    position: fixed;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
+    z-index: z-index.$modal-content;
     padding: 3rem 2rem;
     color: colors.$text;
     border: 0;
     border-radius: spaces.$border-radius;
     background-color: colors.$background-highlight;
-
-    // &::backdrop {
-    // }
 }
 
 .modal-backdrop {

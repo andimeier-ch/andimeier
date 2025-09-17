@@ -3,7 +3,6 @@
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'motion/react';
-import { viewportChildVariants } from '@/lib/motion';
 import './modal.scss';
 
 export default function Modal({
@@ -15,24 +14,29 @@ export default function Modal({
     onClose: () => void;
     children: ReactNode;
 }) {
-    const dialog = useRef<HTMLDialogElement>(null);
+    const dialog = useRef<HTMLDivElement>(null);
     const [isMounted, setIsMounted] = useState<boolean>(false);
 
     useEffect(() => {
         setIsMounted(true);
     }, []);
 
+    // close modal with esc-key
     useEffect(() => {
-        if (!dialog.current) return;
+        if (!isOpen) return;
 
-        if (isOpen) {
-            dialog.current.showModal();
+        function handleKeyDown(event: KeyboardEvent) {
+            if (event.key === 'Escape') {
+                onClose();
+            }
         }
 
+        window.addEventListener('keydown', handleKeyDown);
+
         return () => {
-            dialog.current?.close();
+            window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [isOpen, isMounted]);
+    }, [isOpen, onClose]);
 
     if (!isMounted) return null;
 
@@ -48,18 +52,20 @@ export default function Modal({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
+                        onClick={onClose}
                     />
 
-                    <motion.dialog
+                    <motion.div
                         className="modal"
                         ref={dialog}
-                        onClose={onClose}
+                        role="dialog"
+                        aria-modal="true"
                         initial={{ scale: 0.8, opacity: 0, y: 30 }}
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.8, opacity: 0, y: 30 }}
                     >
                         {children}
-                    </motion.dialog>
+                    </motion.div>
                 </>
             )}
         </AnimatePresence>,
