@@ -16,7 +16,7 @@
         background-color: colors.$background-highlight;
         background-image: colors.$gradient-animated;
         background-size: 200%;
-        border-radius: 8px;
+        border-radius: spaces.$border-radius-small;
         transition: background-position 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
     }
 

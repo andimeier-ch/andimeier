@@ -6,6 +6,7 @@ import Paragraph from '@/components/elements/paragraph/Paragraph';
 import { viewportContainerVariants, viewportChildVariants } from '@/lib/motion';
 import Modal from '@/components/blocks/modal/Modal';
 import { useState } from 'react';
+import ContactForm from '../contact-form/ContactForm';
 
 export default function CallToAction() {
     const [contactFormIsVisible, setContactFormIsVisible] =
@@ -36,9 +37,6 @@ export default function CallToAction() {
                             Schreib mir!
                         </Button>
                     </Paragraph>
-                    {/* <Paragraph center>
-                        <Button email="hallo@andimeier.ch">Schreib mir!</Button>
-                    </Paragraph> */}
                 </motion.div>
             </motion.div>
 
@@ -46,7 +44,7 @@ export default function CallToAction() {
                 isOpen={contactFormIsVisible}
                 onClose={() => setContactFormIsVisible(false)}
             >
-                <p>Hallo Modal!</p>
+                <ContactForm />
                 <p>
                     <Button onClick={() => setContactFormIsVisible(false)}>
                         X
