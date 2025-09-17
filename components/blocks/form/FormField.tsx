@@ -1,28 +1,24 @@
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 import './form-field.scss';
 
 export default function FormField({
-    type,
     label,
     name,
-    ...props
+    required = false,
+    children,
 }: {
-    type: InputHTMLAttributes<HTMLInputElement>['type'];
     label: string;
     name: string;
-} & InputHTMLAttributes<HTMLInputElement>) {
+    required?: boolean;
+    children: ReactNode;
+}) {
     return (
         <div className="form-field">
-            <input
-                className="form-field__input"
-                type={type}
-                name={name}
-                id={name}
-                {...props}
-            />
+            {children}
 
             <label className="form-field__label" htmlFor={name}>
                 {label}
+                {required ? '*' : undefined}
             </label>
         </div>
     );
