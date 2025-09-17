@@ -31,7 +31,14 @@ export default function ContactForm({ onCancel }: { onCancel: () => void }) {
             <Input type="email" label="E-Mail" name="email" required />
             <Textarea label="Nachricht" name="message" rows={6} required />
 
-            {formState && <Paragraph>{formState.message}</Paragraph>}
+            {formState && (
+                <Paragraph
+                    classNames={['paragraph--whitespace-pre-line']}
+                    size="small"
+                >
+                    {formState.message}
+                </Paragraph>
+            )}
 
             <div className="contact-form__actions">
                 <Button

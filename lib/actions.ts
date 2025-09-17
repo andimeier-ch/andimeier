@@ -1,18 +1,43 @@
 'use server';
 
 import nodemailer from 'nodemailer';
+import * as z from 'zod';
 
 export type sendMailFormState = {
     ok: boolean;
     message: string;
 };
 
+const ContactMessage = z.object({
+    email: z.email('Gib eine gültige E-Mail Adresse ein.'),
+    message: z
+        .string()
+        .min(
+            10,
+            'Gib eine Nachricht ein, die länger mindestens 10 Zeichen lang ist.'
+        ),
+});
+
 export async function sendMail(
     prevState: sendMailFormState | null,
     formData: FormData
 ): Promise<sendMailFormState> {
-    const email = formData.get('email') as string;
-    const message = formData.get('message') as string;
+    const data = {
+        email: formData.get('email'),
+        message: formData.get('message'),
+    };
+
+    const parsed = ContactMessage.safeParse(data);
+
+    if (!parsed.success) {
+        const message = parsed.error.issues
+            .map((issue) => `❌ ${issue.message}`)
+            .join('\n');
+
+        return { ok: false, message };
+    }
+
+    const { email, message } = parsed.data;
 
     try {
         const transporter = nodemailer.createTransport({
