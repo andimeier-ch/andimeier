@@ -20,6 +20,7 @@ export default function Input({
                 type={type}
                 name={name}
                 id={name}
+                required={required}
                 {...props}
             />
         </FormField>

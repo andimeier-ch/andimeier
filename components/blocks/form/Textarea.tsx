@@ -13,7 +13,13 @@ export default function Textarea({
 } & TextareaHTMLAttributes<HTMLTextAreaElement>) {
     return (
         <FormField label={label} name={name} required={required}>
-            <textarea className="form-field__input" {...props}></textarea>
+            <textarea
+                className="form-field__input form-field__input--textarea"
+                id={name}
+                name={name}
+                required={required}
+                {...props}
+            ></textarea>
         </FormField>
     );
 }
