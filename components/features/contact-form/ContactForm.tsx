@@ -5,6 +5,7 @@ import Input from '@/components/blocks/form/Input';
 import Textarea from '@/components/blocks/form/Textarea';
 import Paragraph from '@/components/elements/paragraph/Paragraph';
 import './contact-form.scss';
+import ContactFormMessages from './ContactFormMessages';
 
 export default function ContactForm({ onCancel }: { onCancel: () => void }) {
     const [formState, formAction, isPending] = useActionState<
@@ -15,7 +16,10 @@ export default function ContactForm({ onCancel }: { onCancel: () => void }) {
     if (formState?.ok) {
         return (
             <div>
-                <Paragraph>{formState.message}</Paragraph>
+                <ContactFormMessages
+                    messages={formState.messages}
+                    type="success"
+                />
 
                 <div className="contact-form__actions">
                     <Button size="small" onClick={onCancel}>
@@ -32,12 +36,10 @@ export default function ContactForm({ onCancel }: { onCancel: () => void }) {
             <Textarea label="Nachricht" name="message" rows={6} required />
 
             {formState && (
-                <Paragraph
-                    classNames={['paragraph--whitespace-pre-line']}
-                    size="small"
-                >
-                    {formState.message}
-                </Paragraph>
+                <ContactFormMessages
+                    messages={formState.messages}
+                    type="error"
+                />
             )}
 
             <div className="contact-form__actions">

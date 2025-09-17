@@ -5,7 +5,7 @@ import * as z from 'zod';
 
 export type sendMailFormState = {
     ok: boolean;
-    message: string;
+    messages: string[];
 };
 
 const ContactMessage = z.object({
@@ -30,11 +30,10 @@ export async function sendMail(
     const parsed = ContactMessage.safeParse(data);
 
     if (!parsed.success) {
-        const message = parsed.error.issues
-            .map((issue) => `❌ ${issue.message}`)
-            .join('\n');
-
-        return { ok: false, message };
+        return {
+            ok: false,
+            messages: parsed.error.issues.map((issue) => issue.message),
+        };
     }
 
     const { email, message } = parsed.data;
@@ -59,15 +58,16 @@ export async function sendMail(
 
         return {
             ok: true,
-            message: '🎉 Deine Nachricht wurde erfolgreich übermittelt.',
+            messages: ['Deine Nachricht wurde erfolgreich übermittelt.'],
         };
     } catch (error) {
         console.error(error);
 
         return {
             ok: false,
-            message:
-                '❌ Die Nachricht konnte nicht gesendet werden. Versuche es später noch einmal.',
+            messages: [
+                'Die Nachricht konnte nicht gesendet werden. Versuche es später noch einmal.',
+            ],
         };
     }
 }
