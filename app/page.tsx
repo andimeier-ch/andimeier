@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { getDictionary } from '@/lib/i18n';
 import Section from '@/components/elements/section/Section';
 import Heading from '@/components/elements/heading/Heading';
@@ -7,8 +6,6 @@ import Claim from '@/components/blocks/claim/Claim';
 import CardList from '@/components/blocks/card/CardList';
 import JobAccordion from '@/components/features/job-accordion/JobAccordion';
 import Projects from '@/components/features/projects/Projects';
-import Button from '@/components/blocks/button/Button';
-import Paragraph from '@/components/elements/paragraph/Paragraph';
 import './page.scss';
 import CallToAction from '@/components/features/call-to-action/CallToAction';
 
