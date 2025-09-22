@@ -1,12 +1,12 @@
 @use 'sass:math';
-@use '../settings/typography';
+@use '../settings/spaces';
 
 // https://www.smashingmagazine.com/2022/10/fluid-typography-clamp-sass-functions/#creating-a-basic-automated-fluid-function
 @function scale(
     $min-size,
     $max-size,
     $min-breakpoint: 25rem,
-    $max-breakpoint: typography.$content-max-width,
+    $max-breakpoint: spaces.$content-max-width,
     $unit: vw
 ) {
     $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);

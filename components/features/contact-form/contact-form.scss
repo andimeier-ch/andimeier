@@ -1,0 +1,11 @@
+.contact-form {
+    width: 90vw;
+    max-width: 400px;
+
+    &__actions {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1rem;
+        justify-content: end;
+    }
+}

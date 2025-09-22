@@ -1,0 +1,20 @@
+@use '@/styles/settings/typography';
+
+.contact-form-messages {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    font-size: typography.$font-size-small;
+
+    &--success {
+        list-style-type: '\1F389';
+    }
+
+    &--error {
+        list-style-type: '\274C';
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+        padding-left: 0.75rem;
+    }
+}
