@@ -7,7 +7,6 @@ type LinkProps = {
 } & AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export default function Link({ children, className, ...props }: LinkProps) {
-    console.log(props);
     const classes = ['link', className].join(' ').trim();
 
     return (

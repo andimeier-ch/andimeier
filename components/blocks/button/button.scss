@@ -1,0 +1,57 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/styles/utils/button';
+@use '@/styles/utils/fluid';
+@use '@/styles/utils/focus';
+
+.button {
+    &--button {
+        @include button.reset();
+    }
+
+    & {
+        display: inline-block;
+        border-radius: spaces.$border-radius-small;
+        cursor: pointer;
+        @include focus.style();
+    }
+
+    &--large {
+        padding: 1rem 3rem;
+        font-size: fluid.scale(1.2rem, 1.5rem);
+    }
+
+    &--small {
+        padding: 0.5rem 1rem;
+        font-size: fluid.scale(1rem, 1.125rem);
+    }
+
+    &--primary {
+        color: colors.$background;
+        background-color: colors.$background-highlight;
+        background-image: colors.$gradient-animated;
+        background-size: 200%;
+        transition: background-position 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+        &:hover {
+            background-position: -200%;
+        }
+    }
+
+    &--secondary {
+        color: colors.$text;
+        outline: 2px solid colors.$text;
+        outline-offset: -2px;
+        transition: 0.1s ease-out;
+        transition-property: color, outline-color;
+
+        &:hover {
+            color: colors.$primary-bright;
+            outline-color: colors.$primary-bright;
+        }
+    }
+
+    &--link {
+        text-decoration: none;
+    }
+}

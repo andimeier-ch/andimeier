@@ -1,0 +1,43 @@
+@use '@/styles/settings/colors';
+@use '@/styles/settings/spaces';
+@use '@/styles/settings/typography';
+@use '@/styles/utils/fluid';
+@use '@/styles/utils/focus';
+
+$animation-duration: 0.1s;
+$animation-easing: ease-out;
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 2rem;
+
+    &__label {
+        order: 1;
+        font-size: 1rem;
+        transition: color $animation-duration $animation-easing;
+    }
+
+    &__input {
+        order: 2;
+        padding: 0.75rem 1rem;
+        font-size: typography.$font-size-default;
+        font-family: typography.$body-font;
+        color: colors.$background;
+        border: 0;
+        border-radius: spaces.$border-radius-small;
+        @include focus.style($animation-duration, $animation-easing);
+
+        &:focus {
+            + .form-field__label {
+                color: colors.$primary-bright;
+            }
+        }
+
+        &--textarea {
+            font-size: typography.$font-size-small;
+            resize: vertical;
+        }
+    }
+}

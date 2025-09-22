@@ -7,6 +7,7 @@ import CardList from '@/components/blocks/card/CardList';
 import JobAccordion from '@/components/features/job-accordion/JobAccordion';
 import Projects from '@/components/features/projects/Projects';
 import './page.scss';
+import CallToAction from '@/components/features/call-to-action/CallToAction';
 
 export default function Home() {
     const { header, about, experience, projects } = getDictionary('de');
@@ -29,6 +30,10 @@ export default function Home() {
                     </Heading>
 
                     <CardList items={about.topics} />
+                </Section>
+
+                <Section size="narrow">
+                    <CallToAction />
                 </Section>
 
                 <Section size="narrow" marginTop={16} marginBottom={16}>

@@ -1,14 +1,23 @@
+@use '@/styles/settings/typography';
 @use '@/styles/utils/fluid';
 
 .paragraph {
     margin: 1em 0;
 
     &--large {
-        font-size: fluid.scale(1.2rem, 1.8rem);
+        font-size: typography.$font-size-large;
         line-height: 1.5;
     }
 
     &--small {
-        font-size: fluid.scale(0.8rem, 0.9rem);
+        font-size: typography.$font-size-small;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--whitespace-pre-line {
+        white-space: pre-line;
     }
 }

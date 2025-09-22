@@ -19,12 +19,28 @@ $padding-y: fluid.scale(1rem, 1.5rem);
 
     &__trigger {
         @include button.reset();
+        position: relative;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 0 2rem;
         width: 100%;
         padding: $padding-y $padding-x 0;
         cursor: pointer;
+
+        &::after {
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            right: 0;
+            display: block;
+            height: 1rem;
+            content: '';
+
+            @media (min-width: 400px) {
+                bottom: -1.5rem;
+                height: 1.5rem;
+            }
+        }
     }
 
     &__maintitle {
