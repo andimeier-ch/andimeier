@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import './form-field.scss';
 
 export default function FormField({
