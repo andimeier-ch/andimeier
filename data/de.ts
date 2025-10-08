@@ -102,9 +102,9 @@ const experience: ExperienceSection = {
     ],
 };
 
-const projects: ProjectsSection = {
+const largeProjects: ProjectsSection = {
     title: 'Projekte',
-    lead: 'Projekte, bei denen ich im Frontend massgeblich beteiligt war. Alles bei Helga.',
+    lead: 'Projekte von Helga Digitalagentur, bei denen ich im Frontend massgeblich beteiligt war. (Twig, SCSS, JavaScript/TypeScript, Drupal)',
     items: [
         {
             id: 'p1',
@@ -133,4 +133,26 @@ const projects: ProjectsSection = {
     ],
 };
 
-export default { header, about, experience, projects };
+const privateProjects: ProjectsSection = {
+    lead: 'Private Projekte, die ich von A-Z selbst umgesetzt habe. (Konzeption, Design, Twig, SCSS, JavaScript, Kirby CMS, Hosting)',
+    items: [
+        {
+            id: 'p4',
+            name: 'Bösch Holzbau',
+            type: 'Website',
+            image: 'boesch-holzbau.png',
+            linkTitle: 'boesch-holzbau.ch',
+            linkURL: 'https://boesch-holzbau.ch/',
+        },
+        {
+            id: 'p5',
+            name: 'Rahel Schmid Art',
+            type: 'Website',
+            image: 'rahelschmidart.png',
+            linkTitle: 'rahelschmid.ch',
+            linkURL: 'https://rahelschmid.ch/',
+        },
+    ],
+};
+
+export default { header, about, experience, privateProjects, largeProjects };

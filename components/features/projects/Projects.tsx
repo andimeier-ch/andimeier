@@ -11,12 +11,16 @@ import './projects.scss';
 import BystronicScreenshot from '@/assets/images/bystronic.png';
 import RondoScreenshot from '@/assets/images/rondo.png';
 import UBSFootballSkillsScreenshot from '@/assets/images/ubs-football-skills.png';
+import BoeschHolzbauScreenshot from '@/assets/images/boesch-holzbau.png';
+import RahelSchmidArtScreenshot from '@/assets/images/rahelschmidart.png';
 import Paragraph from '@/components/elements/paragraph/Paragraph';
 
 const images: Record<string, StaticImageData> = {
     'bystronic.png': BystronicScreenshot,
     'rondo.png': RondoScreenshot,
     'ubs-football-skills.png': UBSFootballSkillsScreenshot,
+    'boesch-holzbau.png': BoeschHolzbauScreenshot,
+    'rahelschmidart.png': RahelSchmidArtScreenshot,
 };
 
 export default function Projects({
@@ -24,16 +28,18 @@ export default function Projects({
     lead,
     projects,
 }: {
-    title: string;
+    title?: string;
     lead?: string;
     projects: Project[];
 }) {
     return (
         <>
             <div className="section__title">
-                <Heading tag="h2" designLevel={2}>
-                    {title}
-                </Heading>
+                {title && (
+                    <Heading tag="h2" designLevel={2}>
+                        {title}
+                    </Heading>
+                )}
 
                 <Paragraph>{lead}</Paragraph>
             </div>

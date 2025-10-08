@@ -10,7 +10,7 @@ export default function JobAccordion({
     title,
     jobs,
 }: {
-    title: string;
+    title?: string;
     jobs: Job[];
 }) {
     function generateJobId(job: Job) {
@@ -19,11 +19,13 @@ export default function JobAccordion({
 
     return (
         <>
-            <div className="section__title">
-                <Heading tag="h2" designLevel={2}>
-                    {title}
-                </Heading>
-            </div>
+            {title && (
+                <div className="section__title">
+                    <Heading tag="h2" designLevel={2}>
+                        {title}
+                    </Heading>
+                </div>
+            )}
 
             <Accordion className="accordion">
                 {jobs.map((job) => {

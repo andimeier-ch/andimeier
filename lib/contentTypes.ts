@@ -25,7 +25,7 @@ export interface Project {
 }
 
 interface Section {
-    title: string;
+    title?: string;
     lead?: string;
 }
 

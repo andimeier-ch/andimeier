@@ -6,11 +6,12 @@ import Claim from '@/components/blocks/claim/Claim';
 import CardList from '@/components/blocks/card/CardList';
 import JobAccordion from '@/components/features/job-accordion/JobAccordion';
 import Projects from '@/components/features/projects/Projects';
-import './page.scss';
 import CallToAction from '@/components/features/call-to-action/CallToAction';
+import './page.scss';
 
 export default function Home() {
-    const { header, about, experience, projects } = getDictionary('de');
+    const { header, about, experience, largeProjects, privateProjects } =
+        getDictionary('de');
 
     return (
         <>
@@ -43,11 +44,19 @@ export default function Home() {
                     />
                 </Section>
 
-                <Section size="narrow" marginTop={16} marginBottom={16}>
+                <Section size="narrow" marginTop={16} marginBottom={8}>
                     <Projects
-                        title={projects.title}
-                        lead={projects.lead}
-                        projects={projects.items}
+                        title={largeProjects.title}
+                        lead={largeProjects.lead}
+                        projects={largeProjects.items}
+                    />
+                </Section>
+
+                <Section size="narrow" marginTop={8} marginBottom={16}>
+                    <Projects
+                        title={privateProjects.title}
+                        lead={privateProjects.lead}
+                        projects={privateProjects.items}
                     />
                 </Section>
             </main>
