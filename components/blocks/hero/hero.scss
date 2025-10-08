@@ -21,9 +21,9 @@
     }
 
     &__title {
-        // font-size: min(12vw, 10rem);
         font-size: fluid.scale(3rem, 10rem);
         line-height: 1.1;
+        letter-spacing: -0.02em;
         text-align: center;
         color: transparent;
         background-image: colors.$gradient;

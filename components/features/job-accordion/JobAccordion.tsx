@@ -10,7 +10,7 @@ export default function JobAccordion({
     title,
     jobs,
 }: {
-    title: string;
+    title?: string;
     jobs: Job[];
 }) {
     function generateJobId(job: Job) {
@@ -19,11 +19,13 @@ export default function JobAccordion({
 
     return (
         <>
-            <div className="section__title">
-                <Heading tag="h2" designLevel={2}>
-                    {title}
-                </Heading>
-            </div>
+            {title && (
+                <div className="section__title">
+                    <Heading tag="h2" designLevel={2}>
+                        {title}
+                    </Heading>
+                </div>
+            )}
 
             <Accordion className="accordion">
                 {jobs.map((job) => {
@@ -38,11 +40,15 @@ export default function JobAccordion({
                                     designLevel={3}
                                     classNames={['accordion__maintitle']}
                                 >
-                                    {job.company}
+                                    {job.jobTitle}
                                 </Heading>
 
                                 <Paragraph classNames={['accordion__subtitle']}>
-                                    {job.period.join('\u2009–\u2009')}
+                                    {job.period.join('\u2009–\u2009')} bei{' '}
+                                    {job.company}{' '}
+                                    {job.location === 'Remote'
+                                        ? `(${job.location})`
+                                        : `in ${job.location}`}
                                 </Paragraph>
                             </>
                         ),
@@ -56,25 +62,13 @@ export default function JobAccordion({
                     const content = {
                         className: 'accordion__content',
                         markup: (
-                            <>
-                                <Paragraph>
-                                    <strong>
-                                        als {job.jobTitle}{' '}
-                                        {job.location === 'Remote'
-                                            ? `(${job.location})`
-                                            : `in ${job.location}`}
-                                        :
-                                    </strong>
-                                </Paragraph>
-
-                                <ul className="list">
-                                    {job.tasks.map((task) => (
-                                        <li key={task} className="list__item">
-                                            {task}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </>
+                            <ul className="list">
+                                {job.tasks.map((task) => (
+                                    <li key={task} className="list__item">
+                                        {task}
+                                    </li>
+                                ))}
+                            </ul>
                         ),
                     };
 

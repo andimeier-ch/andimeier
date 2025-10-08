@@ -6,7 +6,7 @@ import {
 } from '@/lib/contentTypes';
 
 const header: HeaderSection = {
-    title: 'Hallo, ich bin Andi, Frontend Entwickler.',
+    title: 'Hallo, ich bin Andi, ein Frontend Entwickler.',
     claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle moderne Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
 };
 
@@ -28,10 +28,11 @@ const about: AboutSection = {
             icon: '💪🏻',
             title: 'So arbeite ich',
             items: [
-                'Überblick & Fokus: das Ganze im Blick, Details im Griff',
-                'Struktur & Innovation: Ordnung schaffen, neue Wege gehen',
-                'Vernetzen & Zusammenbringen: Synergien erkennen und nutzen',
-                'Sauberer, wartbarer Code: skalierbare und übersichtliche Lösungen',
+                'Den Überblick behalten und auf das Wesentliche fokussieren.',
+                'Struktur geben und offen für neue Wege bleiben.',
+                'Klare, wartbare und skalierbare Lösungen schaffen.',
+                'Eigenverantwortlich arbeiten und aktiv mitdenken.',
+                'Menschen vernetzen und Zusammenarbeit stärken.',
             ],
         },
         {
@@ -39,9 +40,9 @@ const about: AboutSection = {
             icon: '🛠',
             title: 'Das kann ich',
             items: [
-                'HTML (Twig), CSS (SCSS), JavaScript, TypeScript, React',
-                'Drupal, PHP, Git',
-                'Komponentenbasiertes Arbeiten & Code-Abstraktion',
+                'HTML, Twig, CSS/SCSS, JavaScript, TypeScript, React, Vue.js',
+                'PHP, Drupal, Kirby, Git',
+                'Komponentenbasiertes Arbeiten & DRY Code',
                 'Strukturierung grosser Frontend-Projekte',
             ],
         },
@@ -101,9 +102,9 @@ const experience: ExperienceSection = {
     ],
 };
 
-const projects: ProjectsSection = {
+const largeProjects: ProjectsSection = {
     title: 'Projekte',
-    lead: 'Projekte, bei denen ich im Frontend massgeblich beteiligt war. Alles bei Helga.',
+    lead: 'Projekte von Helga Digitalagentur, bei denen ich im Frontend massgeblich beteiligt war. (Twig, SCSS, JavaScript/TypeScript, Drupal)',
     items: [
         {
             id: 'p1',
@@ -132,4 +133,26 @@ const projects: ProjectsSection = {
     ],
 };
 
-export default { header, about, experience, projects };
+const privateProjects: ProjectsSection = {
+    lead: 'Private Projekte, die ich von A-Z selbst umgesetzt habe. (Konzeption, Design, Twig, SCSS, JavaScript, Kirby CMS, Hosting)',
+    items: [
+        {
+            id: 'p4',
+            name: 'Bösch Holzbau',
+            type: 'Website',
+            image: 'boesch-holzbau.png',
+            linkTitle: 'boesch-holzbau.ch',
+            linkURL: 'https://boesch-holzbau.ch/',
+        },
+        {
+            id: 'p5',
+            name: 'Rahel Schmid Art',
+            type: 'Website',
+            image: 'rahelschmidart.png',
+            linkTitle: 'rahelschmid.ch',
+            linkURL: 'https://rahelschmid.ch/',
+        },
+    ],
+};
+
+export default { header, about, experience, privateProjects, largeProjects };
