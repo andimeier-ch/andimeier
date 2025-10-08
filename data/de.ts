@@ -6,7 +6,7 @@ import {
 } from '@/lib/contentTypes';
 
 const header: HeaderSection = {
-    title: 'Hallo, ich bin Andi, Frontend Entwickler.',
+    title: 'Hallo, ich bin Andi, ein Frontend Entwickler.',
     claim: 'Meine Leidenschaft ist die Verbindung von Technik und Gestaltung. Ich entwickle moderne Frontend-Lösungen, die sowohl technisch ausgereift als auch intuitiv zu bedienen sind.',
 };
 
@@ -28,10 +28,11 @@ const about: AboutSection = {
             icon: '💪🏻',
             title: 'So arbeite ich',
             items: [
-                'Überblick & Fokus: das Ganze im Blick, Details im Griff',
-                'Struktur & Innovation: Ordnung schaffen, neue Wege gehen',
-                'Vernetzen & Zusammenbringen: Synergien erkennen und nutzen',
-                'Sauberer, wartbarer Code: skalierbare und übersichtliche Lösungen',
+                'Den Überblick behalten und auf das Wesentliche fokussieren.',
+                'Struktur geben und offen für neue Wege bleiben.',
+                'Klare, wartbare und skalierbare Lösungen schaffen.',
+                'Eigenverantwortlich arbeiten und aktiv mitdenken.',
+                'Menschen vernetzen und Zusammenarbeit stärken.',
             ],
         },
         {
@@ -39,9 +40,9 @@ const about: AboutSection = {
             icon: '🛠',
             title: 'Das kann ich',
             items: [
-                'HTML (Twig), CSS (SCSS), JavaScript, TypeScript, React',
-                'Drupal, PHP, Git',
-                'Komponentenbasiertes Arbeiten & Code-Abstraktion',
+                'HTML, Twig, CSS/SCSS, JavaScript, TypeScript, React, Vue.js',
+                'PHP, Drupal, Kirby, Git',
+                'Komponentenbasiertes Arbeiten & DRY Code',
                 'Strukturierung grosser Frontend-Projekte',
             ],
         },
